@@ -18,7 +18,8 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
   
 ## ✔️ Emenda do curso
 
-- ``pipeline do ASP.NET MVC``
+- ``Pipeline do ASP.NET MVC ``
+- ``Pipeline do ASP.NET MVC``
 - ``Ferramentas de Bundling e Minification``
 - ``Tag Helper Customizado``
 - ``View Component``
@@ -27,13 +28,17 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
   
 # Referências
 *  *[ASP.NET Core](https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-8.0?target=_blank)*
-*  *[Middleware](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0?target=_blank)*
+*  *[Pipeline do ASPNET](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/middleware/?target=_blank)*
+*  *[Bundling and Minification](https://learn.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification?target=_blank)*
+*  *[Tag Helper](https://learn.microsoft.com/pt-br/aspnet/core/mvc/views/tag-helpers?target=_blank)*
 
 <div id='telas'/> 
   
 # Telas
-![Tela]()
-![Tela]()
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet.jpg)
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet-mvc.jpg)
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet-mvc-2.jpg)
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/tag-helpers.jpg)
 
 <div id='sobre'/>  
   
