@@ -1,18 +1,35 @@
 ﻿@model IEnumerable<ASPNETCoreMVC.Models.Produto>
 
 @{
-    ViewData["Title"] = "Meus Produtos";
+    ViewData["Title"] = "Produtos";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>
+<style>
+    a {
+        padding: 5px;
+        margin: 5px;
+        color: white;
+    }
+    .main-div {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+</style>
+<div class="text-center main-div">
+    <h3>Dominando o ASP.NET Core MVC</h3>
+    @(await Component.InvokeAsync("SocialLinks", new { IconsToShow = 5 }))
+</div>
+
+<p style="float:right">
     <a class="btn btn-primary" asp-action="Create"><spam class="fa fa-plus"></spam> Novo</a>
 </p>
 
-<table class="table">
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-hover">
     <thead>
         <tr>
-            <th></th>
+            <th>Imagem</th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
@@ -46,3 +63,7 @@
         }
     </tbody>
 </table>
+
+<vc:counter modelcounter="@Model.Count()"></vc:counter>
+@* @await Component.InvokeAsync("Counter", Model.Count()) *@
+
