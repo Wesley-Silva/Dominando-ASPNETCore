@@ -31,14 +31,14 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 *  *[Pipeline do ASPNET](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/middleware/?target=_blank)*
 *  *[Bundling and Minification](https://learn.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification?target=_blank)*
 *  *[Tag Helper](https://learn.microsoft.com/pt-br/aspnet/core/mvc/views/tag-helpers?target=_blank)*
+*  *[View Component](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/view-components?target=_blank)*
 
 <div id='telas'/> 
   
 # Telas
 ![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet.jpg)
 ![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet-mvc.jpg)
-![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet-mvc-2.jpg)
-![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/tag-helpers.jpg)
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/tela-produtos.jpg)
 
 <div id='sobre'/>  
   
