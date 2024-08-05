@@ -1,10 +1,14 @@
 using ASPNETCoreMVC.Data;
+using ASPNETCoreMVC.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//builder.Services.AddRouting(options =>
+//    options.ConstraintMap["slugify"] = typeof(RouteSlugifyParameterTransformer));
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
@@ -28,6 +32,10 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller:slugify=Home}/{action:slugify=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
