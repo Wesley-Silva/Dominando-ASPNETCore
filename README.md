@@ -23,6 +23,7 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 - ``Ferramentas de Bundling e Minification``
 - ``Tag Helper Customizado``
 - ``View Component``
+- ``Roteamento``
 
 <div id='referencias'/>
   
@@ -32,6 +33,7 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 *  *[Bundling and Minification](https://learn.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification?target=_blank)*
 *  *[Tag Helper](https://learn.microsoft.com/pt-br/aspnet/core/mvc/views/tag-helpers?target=_blank)*
 *  *[View Component](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/view-components?target=_blank)*
+*  *[Roteamento](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/routing?view=aspnetcore-8.0?target=_blank)*
 
 <div id='telas'/> 
   
