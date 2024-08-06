@@ -24,16 +24,18 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 - ``Tag Helper Customizado``
 - ``View Component``
 - ``Roteamento``
+- ``Áreas``
 
 <div id='referencias'/>
   
 # Referências
-*  *[ASP.NET Core](https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-8.0?target=_blank)*
-*  *[Pipeline do ASPNET](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/middleware/?target=_blank)*
-*  *[Bundling and Minification](https://learn.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification?target=_blank)*
-*  *[Tag Helper](https://learn.microsoft.com/pt-br/aspnet/core/mvc/views/tag-helpers?target=_blank)*
-*  *[View Component](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/view-components?target=_blank)*
-*  *[Roteamento](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/routing?view=aspnetcore-8.0?target=_blank)*
+*  *[ASP.NET Core](https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-8.0?target=blank)*
+*  *[Pipeline do ASPNET](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/middleware/?target=blank)*
+*  *[Bundling and Minification](https://learn.microsoft.com/en-us/aspnet/mvc/overview/performance/bundling-and-minification?target=blank)*
+*  *[Tag Helper](https://learn.microsoft.com/pt-br/aspnet/core/mvc/views/tag-helpers?target=blank)*
+*  *[View Component](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/view-components?target=blank)*
+*  *[Roteamento](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/routing?view=aspnetcore-8.0?target=blank)*
+*  *[Áreas](https://learn.microsoft.com/pt-br/aspnet/core/mvc/controllers/areas?view=aspnetcore-8.0?target=blank)*
 
 <div id='telas'/> 
   
@@ -46,5 +48,7 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
   
 ## Sobre
 
-Desenvolvedor com +2 anos de expêriencia, pai do Arthur e Heitor - 
+Desenvolvedor com +2 anos de experiência em desenvolvimento de software, especializado na plataforma .NET. 
+Além do meu trabalho, sou pai dedicado de dois filhos, Arthur e Heitor, e valorizo o equilíbrio entre a vida profissional e pessoal. 
+Minhas habilidades técnicas incluem C#, ASP.NET, SQL Server, e práticas de desenvolvimento. 
 **[Histórico](https://wesleysilva.netlify.app/?target=_blank)**
