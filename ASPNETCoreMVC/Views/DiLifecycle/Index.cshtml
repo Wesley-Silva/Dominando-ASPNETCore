@@ -1,0 +1,12 @@
+﻿@using ASPNETCoreMVC.Services
+@inject OperacaoService operacao 
+
+<div>
+    <p>
+        @Html.Raw(
+        operacao.Transiente.OperacaoId + "<br>" +
+        operacao.Scoped.OperacaoId + "<br>" +
+        operacao.Singleton.OperacaoId + "<br>" +
+        operacao.SingletonInstance.OperacaoId + "<br>")
+    </p>
+</div>
