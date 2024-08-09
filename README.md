@@ -25,6 +25,7 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 - ``View Component``
 - ``Roteamento``
 - ``Áreas``
+- ``Injeção de dependência``
 
 <div id='referencias'/>
   
@@ -36,6 +37,7 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 *  *[View Component](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/view-components?target=blank)*
 *  *[Roteamento](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/routing?view=aspnetcore-8.0?target=blank)*
 *  *[Áreas](https://learn.microsoft.com/pt-br/aspnet/core/mvc/controllers/areas?view=aspnetcore-8.0?target=blank)*
+*  *[Injeção de dependência](https://learn.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection?target=blank)*
 
 <div id='telas'/> 
   
@@ -43,6 +45,7 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 ![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet.jpg)
 ![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet-mvc.jpg)
 ![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/tela-produtos.jpg)
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/injecao-dependencia.jpg)
 
 <div id='sobre'/>  
   
