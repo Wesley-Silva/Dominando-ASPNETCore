@@ -18,14 +18,38 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
   
 ## ✔️ Emenda do curso
 
-- ``Pipeline do ASP.NET MVC ``
-- ``Pipeline do ASP.NET MVC``
-- ``Ferramentas de Bundling e Minification``
-- ``Tag Helper Customizado``
-- ``View Component``
-- ``Roteamento``
-- ``Áreas``
+- ``Conhecimentos essênciais ``
+    * Pipeline do ASP.NET MVC 
+    * Ferramentas de Bundling e Minification
+    * Desenvolvendo um Tag Helper customizado
+    *  Desenvolvendo um View Component
+    *  Roteamento
+    *  Áreas
+      
 - ``Injeção de dependência``
+    * Visão e Configuração de Dependency Injection
+    * Tipos de Ciclo de Vida
+    * Maneiras de fazer DI (Controller/View)
+      
+- ``Segurança``
+    * Proteção contra CSRF
+    * Proteção contra XSS
+    * HSTS e HTTPS
+      
+- ``Configurações Avançadas``
+    * Em breve...
+
+- ``Globalização da aplicação``
+    * Em breve...
+
+- ``Conhecimentos Indispensáveis``
+    * Em breve...
+
+- ``Testes``
+    * Em breve...
+
+- ``Deploy``
+    * Em breve...
 
 <div id='referencias'/>
   
