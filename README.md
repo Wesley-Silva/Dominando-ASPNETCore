@@ -35,6 +35,10 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
     * Proteção contra CSRF
     * Proteção contra XSS
     * HSTS e HTTPS
+    * Identity
+    * Autorização
+    * Autenticação
+    * Claims
       
 - ``Configurações Avançadas``
     * Em breve...
@@ -62,6 +66,7 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 *  *[Roteamento](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/routing?view=aspnetcore-8.0?target=blank)*
 *  *[Áreas](https://learn.microsoft.com/pt-br/aspnet/core/mvc/controllers/areas?view=aspnetcore-8.0?target=blank)*
 *  *[Injeção de dependência](https://learn.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection?target=blank)*
+*  *[Segurança](https://learn.microsoft.com/pt-br/aspnet/core/security/?view=aspnetcore-8.0?target=blank)*
 
 <div id='telas'/> 
   
