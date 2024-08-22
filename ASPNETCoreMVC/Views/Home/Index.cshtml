@@ -1,4 +1,7 @@
-﻿@{
+﻿@using System.Text.Encodings.Web
+
+@inject HtmlEncoder encoder
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,3 +9,23 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@{
+    var inseguro = "<img src='https://t3.ftcdn.net/jpg/05/56/29/10/360_F_556291020_q2ieMiOCKYbtoLITrnt7qcSL1LJYyWrU.jpg' />";
+    var encoded = encoder.Encode(inseguro);
+}
+
+<br />
+<br />
+@inseguro
+<br />
+<br />
+@Html.Raw(inseguro)
+<br />
+<br />
+@encoded
+<br />
+<br />
+@Html.Raw(encoded)
+<br />
+<br />

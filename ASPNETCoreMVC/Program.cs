@@ -1,13 +1,21 @@
 using ASPNETCoreMVC.Data;
 using ASPNETCoreMVC.Extensions;
 using ASPNETCoreMVC.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews();
+
+// ativar globalmente o ForgeryToken
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+});
 
 //builder.Services.AddRouting(options =>
 //    options.ConstraintMap["slugify"] = typeof(RouteSlugifyParameterTransformer));
@@ -33,8 +41,46 @@ builder.Services.AddTransient<OperacaoService>();
 builder.Services.AddDbContext<AppDbContext>(o => 
     o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddHsts(options =>
+{
+    options.Preload = true;
+    options.IncludeSubDomains = true;
+    options.MaxAge = TimeSpan.FromDays(60);
+    options.ExcludedHosts.Add("example.com");
+    options.ExcludedHosts.Add("www.example.com");
+});
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = true;
+}).AddRoles<IdentityRole>()
+  .AddEntityFrameworkStores<AppDbContext>();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("PodeExcluirPermanente", policy =>
+    {
+        policy.RequireRole("Admin");
+    });
+
+    options.AddPolicy("VerProdutos", policy =>
+    {
+        policy.RequireClaim("Produtos", "VI");
+    });
+});
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    
+}
+else
+{
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -66,6 +112,8 @@ app.MapAreaControllerRoute("AreaVendas", "Vendas", "Vendas/{controller=Gestao}/{
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapRazorPages();
 
 // Passando uma instancia antes da aplicação start
 using (var scopeService = app.Services.CreateScope())

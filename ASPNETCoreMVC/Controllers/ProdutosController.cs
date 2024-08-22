@@ -1,10 +1,13 @@
 ﻿using ASPNETCoreMVC.Data;
+using ASPNETCoreMVC.Extensions;
 using ASPNETCoreMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ASPNETCoreMVC.Controllers
 {
+    [Authorize]
     [Route("meus-produtos")]
     public class ProdutosController : Controller
     {
@@ -15,7 +18,8 @@ namespace ASPNETCoreMVC.Controllers
             _context = context;
         }
 
-        // GET: Produtos
+        //[Authorize(Policy = "VerProdutos")]
+        [ClaimsAuthorize("Produtos", "VI")]
         public async Task<IActionResult> Index()
         {
             return _context.Produtos != null ?
@@ -23,6 +27,8 @@ namespace ASPNETCoreMVC.Controllers
                         Problem("Entity set 'AppDbContext.Produtos'  is null.");
         }
 
+        // [Authorize(Policy = "VerProdutos")]
+        [ClaimsAuthorize("Produtos", "VI")]
         [Route("detalhes/{id}")]
         public async Task<IActionResult> Details(int? id)
         {
@@ -41,12 +47,15 @@ namespace ASPNETCoreMVC.Controllers
             return View(produto);
         }
 
+        // AD, VI, ED, EX
+        [ClaimsAuthorize("Produtos", "AD")]
         [Route("criar-novo")]
         public IActionResult CriarNovoProduto()
         {
             return View("Create");
         }
 
+        [ClaimsAuthorize("Produtos", "AD")]
         [HttpPost("criar-novo")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CriarNovoProduto([Bind("Id,Nome,Imagem,Valor")] Produto produto)
@@ -60,6 +69,7 @@ namespace ASPNETCoreMVC.Controllers
             return View("Create", produto);
         }
 
+        [ClaimsAuthorize("Produtos", "ED")]
         [Route("editar-produto")]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -76,6 +86,7 @@ namespace ASPNETCoreMVC.Controllers
             return View(produto);
         }
 
+        [ClaimsAuthorize("Produtos", "ED")]
         [HttpPost("editar-produto/{id}")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Imagem,Valor")] Produto produto)
@@ -108,7 +119,9 @@ namespace ASPNETCoreMVC.Controllers
             return View(produto);
         }
 
+        [ClaimsAuthorize("Produtos", "EX")]
         [Route("excluir/{id}")]
+        //[Authorize(Policy = "PodeExcluirPermanente")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Produtos == null)
@@ -126,8 +139,10 @@ namespace ASPNETCoreMVC.Controllers
             return View(produto);
         }
 
+        [ClaimsAuthorize("Produtos", "EX")]
         [HttpPost("excluir/{id}"), ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        //[Authorize(Policy = "PodeExcluirPermanente")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Produtos == null)
