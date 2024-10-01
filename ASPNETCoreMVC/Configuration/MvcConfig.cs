@@ -3,6 +3,7 @@ using ASPNETCoreMVC.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace ASPNETCoreMVC.Configuration
 {
@@ -14,7 +15,8 @@ namespace ASPNETCoreMVC.Configuration
                 .SetBasePath(builder.Environment.ContentRootPath)
                 .AddJsonFile("appsettings.json", true, true)
                 .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", true, true)
-                .AddEnvironmentVariables();
+                .AddEnvironmentVariables()
+                .AddUserSecrets(Assembly.GetExecutingAssembly(), true);
 
             // Add services to the container.
             //builder.Services.AddControllersWithViews();
@@ -48,6 +50,10 @@ namespace ASPNETCoreMVC.Configuration
                 options.ExcludedHosts.Add("example.com");
                 options.ExcludedHosts.Add("www.example.com");
             });
+
+            // obter dados do arquivo de configuração globalmente
+            builder.Services.Configure<ApiConfiguration>(
+                builder.Configuration.GetSection(ApiConfiguration.ConfigName));
 
             return builder;
         }
