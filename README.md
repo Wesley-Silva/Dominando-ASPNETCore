@@ -41,7 +41,10 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
     * Claims
       
 - ``Configurações Avançadas``
-    * Em breve...
+    * Customizando a classe program
+    * Configuração de ambientes para execução
+    * Lendo arquivos de configurações 
+    * Protegendo dados com User Secrets
 
 - ``Globalização da aplicação``
     * Em breve...
