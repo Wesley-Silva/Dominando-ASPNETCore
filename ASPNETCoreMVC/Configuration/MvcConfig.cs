@@ -62,10 +62,13 @@ namespace ASPNETCoreMVC.Configuration
         {
             if (app.Environment.IsDevelopment())
             {
-
+                app.UseDeveloperExceptionPage();
             }
             else
             {
+                app.UseExceptionHandler("/erro/500");
+                //redirect para outros status code(400,404, 403, etc...)
+                app.UseStatusCodePagesWithRedirects("/erro/{0}");
                 app.UseHsts();
             }
 
