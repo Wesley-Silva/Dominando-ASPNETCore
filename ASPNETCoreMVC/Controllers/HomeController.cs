@@ -23,6 +23,11 @@ namespace ASPNETCoreMVC.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Information");
+            _logger.LogCritical("Critical");
+            _logger.LogWarning("Warning");
+            _logger.LogError("Error");
+
             var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
             // Lendo arquivos de configurações
@@ -37,6 +42,14 @@ namespace ASPNETCoreMVC.Controllers
             var domain = _apiConfiguration.Domain;
 
             return View();
+        }
+
+        [Route("teste")]
+        public IActionResult Teste()
+        {
+            throw new Exception("Algo errado não está certo!");
+
+            return View("Index");
         }
 
         public IActionResult Privacy()
