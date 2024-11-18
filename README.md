@@ -45,6 +45,9 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
     * Configuração de ambientes para execução
     * Lendo arquivos de configurações 
     * Protegendo dados com User Secrets
+    * Tratamento de erros
+    * Realizando o Log de tudo! 
+    * Trabalhando com Filtros 
 
 - ``Globalização da aplicação``
     * Em breve...
@@ -70,6 +73,8 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 *  *[Áreas](https://learn.microsoft.com/pt-br/aspnet/core/mvc/controllers/areas?view=aspnetcore-8.0?target=blank)*
 *  *[Injeção de dependência](https://learn.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection?target=blank)*
 *  *[Segurança](https://learn.microsoft.com/pt-br/aspnet/core/security/?view=aspnetcore-8.0?target=blank)*
+*  *[Log](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/logging/?view=aspnetcore-8.0?target=blank)*
+*  *[Filtros](https://learn.microsoft.com/pt-br/aspnet/mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-cs?target=blank)*
 
 <div id='telas'/> 
   
