@@ -27,6 +27,8 @@ namespace ASPNETCoreMVC.Configuration
             {
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
                 options.Filters.Add(typeof(FiltroAuditoria));
+
+                MvcOptionsConfig.ConfigurarMensagensDeModelBinding(options.ModelBindingMessageProvider);
             });
 
             //builder.Services.AddRouting(options =>
@@ -83,6 +85,8 @@ namespace ASPNETCoreMVC.Configuration
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseGlobalizationConfig();
 
             app.UseElmahIo();
             app.UseElmahIoExtensionsLogging();
