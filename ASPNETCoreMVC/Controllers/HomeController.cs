@@ -1,6 +1,8 @@
 using ASPNETCoreMVC.Configuration;
 using ASPNETCoreMVC.Models;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
 
@@ -11,14 +13,17 @@ namespace ASPNETCoreMVC.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IConfiguration _configuration;
         private readonly ApiConfiguration _apiConfiguration;
+        private readonly IStringLocalizer<HomeController> _localizer;
 
-        public HomeController(ILogger<HomeController> logger, 
+        public HomeController(ILogger<HomeController> logger,
                               IConfiguration configuration,
-                              IOptions<ApiConfiguration> apiConfiguration)
+                              IOptions<ApiConfiguration> apiConfiguration,
+                              IStringLocalizer<HomeController> localizer)
         {
             _logger = logger;
             _configuration = configuration;
             _apiConfiguration = apiConfiguration.Value;
+            _localizer = localizer;
         }
 
         public IActionResult Index()
@@ -41,7 +46,21 @@ namespace ASPNETCoreMVC.Controllers
 
             var domain = _apiConfiguration.Domain;
 
+            ViewData["Message"] = _localizer["Seja bem vindo!"];
+
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl) 
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1)}
+            );
+
+            return LocalRedirect(returnUrl);
         }
 
         [Route("teste")]

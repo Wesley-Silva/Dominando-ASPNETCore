@@ -29,7 +29,9 @@ namespace ASPNETCoreMVC.Configuration
                 options.Filters.Add(typeof(FiltroAuditoria));
 
                 MvcOptionsConfig.ConfigurarMensagensDeModelBinding(options.ModelBindingMessageProvider);
-            });
+            })
+            .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+            .AddDataAnnotationsLocalization();
 
             //builder.Services.AddRouting(options =>
             //    options.ConstraintMap["slugify"] = typeof(RouteSlugifyParameterTransformer));

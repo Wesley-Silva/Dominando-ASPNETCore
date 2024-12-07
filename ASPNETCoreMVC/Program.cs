@@ -3,7 +3,9 @@ using ASPNETCoreMVC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.AddMvcConfiguration()
+builder
+       .AddGlobalizationConfig()
+       .AddMvcConfiguration()
        .AddIdentityConfiguration()
        .AddElmahConfiguration()
        .AddDependencyInjectionConfiguration();

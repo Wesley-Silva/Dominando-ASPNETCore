@@ -1,4 +1,6 @@
-﻿using ASPNETCoreMVC.Services;
+﻿using ASPNETCoreMVC.Extensions;
+using ASPNETCoreMVC.Services;
+using Microsoft.AspNetCore.Mvc.DataAnnotations;
 
 namespace ASPNETCoreMVC.Configuration
 {
@@ -14,6 +16,7 @@ namespace ASPNETCoreMVC.Configuration
             builder.Services.AddSingleton<IOperacaoSingletonInstance>(new Operacao(Guid.Empty));
 
             builder.Services.AddTransient<OperacaoService>();
+            builder.Services.AddSingleton<IValidationAttributeAdapterProvider, MoedaValidationAttributeAdapterProvider>();
 
             return builder;
         }
