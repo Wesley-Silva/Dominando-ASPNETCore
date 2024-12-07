@@ -50,7 +50,8 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
     * Trabalhando com Filtros 
 
 - ``Globalização da aplicação``
-    * Em breve...
+    * Cultura na aplicação
+    * Validações front-end
 
 - ``Conhecimentos Indispensáveis``
     * Em breve...
