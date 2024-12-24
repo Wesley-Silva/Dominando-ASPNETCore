@@ -52,6 +52,8 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 - ``Globalização da aplicação``
     * Cultura na aplicação
     * Validações front-end
+    * Data Annotation customizado
+    * Suporte a outros idiomas      
 
 - ``Conhecimentos Indispensáveis``
     * Em breve...
