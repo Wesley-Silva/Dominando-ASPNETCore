@@ -19,6 +19,8 @@ namespace ASPNETCoreMVC.Configuration
                 .AddEnvironmentVariables()
                 .AddUserSecrets(Assembly.GetExecutingAssembly(), true);
 
+            builder.Services.AddResponseCaching();
+
             // Add services to the container.
             //builder.Services.AddControllersWithViews();
 
@@ -32,6 +34,13 @@ namespace ASPNETCoreMVC.Configuration
             })
             .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
             .AddDataAnnotationsLocalization();
+
+            builder.Services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+                options.ConsentCookieValue = "true";
+            });
 
             //builder.Services.AddRouting(options =>
             //    options.ConstraintMap["slugify"] = typeof(RouteSlugifyParameterTransformer));
@@ -88,13 +97,18 @@ namespace ASPNETCoreMVC.Configuration
                 app.UseHsts();
             }
 
+            app.UseResponseCaching();
+
             app.UseGlobalizationConfig();
 
             app.UseElmahIo();
+
             app.UseElmahIoExtensionsLogging();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseCookiePolicy();
 
             app.UseRouting();
 

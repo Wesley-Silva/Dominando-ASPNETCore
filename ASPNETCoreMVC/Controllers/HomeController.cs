@@ -26,6 +26,7 @@ namespace ASPNETCoreMVC.Controllers
             _localizer = localizer;
         }
 
+        //[ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)]
         public IActionResult Index()
         {
             _logger.LogInformation("Information");
@@ -48,19 +49,39 @@ namespace ASPNETCoreMVC.Controllers
 
             ViewData["Message"] = _localizer["Seja bem vindo!"];
 
+            ViewData["Horario"] = DateTime.Now;
+
+            if (Request.Cookies.TryGetValue("MeuCookie", out string? cookieValue))
+            {
+                ViewData["MeuCookie"] = cookieValue;
+            }
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult SetLanguage(string culture, string returnUrl) 
+        public IActionResult SetLanguage(string culture, string returnUrl)
         {
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1)}
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
 
             return LocalRedirect(returnUrl);
+        }
+
+        [Route("cookies")]
+        public IActionResult Cookie()
+        { 
+            var cookieOptions = new CookieOptions
+            {
+                Expires = DateTime.Now.AddDays(1)
+            };
+
+            Response.Cookies.Append("MeuCookie", "Dados do Cookie", cookieOptions);
+
+            return View();
         }
 
         [Route("teste")]
