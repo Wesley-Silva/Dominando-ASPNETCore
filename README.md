@@ -56,7 +56,8 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
     * Suporte a outros idiomas      
 
 - ``Conhecimentos Indispensáveis``
-    * Em breve...
+    * Ajax e Modal Window
+    * Upload de arquivos
 
 - ``Testes``
     * Em breve...
