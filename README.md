@@ -58,9 +58,15 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 - ``Conhecimentos Indispensáveis``
     * Ajax e Modal Window
     * Upload de arquivos
+    * Implementando Cache
+    * Trabalhando com Cookies
+    * Comportamento do Razor
 
 - ``Testes``
-    * Em breve...
+    * Teste de Unidade
+    * Ferramental de testes
+    * Estrutura de um teste
+    * Teste de controller com Mocks
 
 - ``Deploy``
     * Em breve...
