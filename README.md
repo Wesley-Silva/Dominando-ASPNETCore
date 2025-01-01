@@ -1,5 +1,5 @@
 <p align="center">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=%20CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
 
 # Curso - Dominando o ASP.NET Core MVC
@@ -69,7 +69,11 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
     * Teste de controller com Mocks
 
 - ``Deploy``
-    * Em breve...
+    * Rodando em Self Hosting
+    * Deploy via Docker
+    * Configurações do Ambiente Docker
+    * Deploy via IIS Local
+    * Deploy na Nuvem - Azure
 
 <div id='referencias'/>
   
@@ -85,14 +89,18 @@ incluindo arquitetura MVC, rotas, controllers, views, modelos de dados, validaç
 *  *[Segurança](https://learn.microsoft.com/pt-br/aspnet/core/security/?view=aspnetcore-8.0?target=blank)*
 *  *[Log](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/logging/?view=aspnetcore-8.0?target=blank)*
 *  *[Filtros](https://learn.microsoft.com/pt-br/aspnet/mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-cs?target=blank)*
+*  *[Cache](https://learn.microsoft.com/pt-br/aspnet/core/performance/caching/overview?view=aspnetcore-9.0?target=blank)*
+*  *[Cookies](https://learn.microsoft.com/pt-br/aspnet/core/security/authentication/cookie?view=aspnetcore-9.0?target=blank)*  
 
 <div id='telas'/> 
   
 # Telas
 ![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet.jpg)
 ![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/pipeline-aspnet-mvc.jpg)
-![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/tela-produtos.jpg)
 ![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/injecao-dependencia.jpg)
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/tela-inicial.jpg)
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/tela-produtos.jpg)
+![Tela](https://github.com/Wesley-Silva/Dominando-ASPNETCore/blob/main/ASPNETCoreMVC/wwwroot/ImagesReadme/editar-produto.jpg)
 
 <div id='sobre'/>  
   
