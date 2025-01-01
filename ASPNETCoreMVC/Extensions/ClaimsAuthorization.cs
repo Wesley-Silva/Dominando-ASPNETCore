@@ -30,23 +30,23 @@ namespace ASPNETCoreMVC.Extensions
 
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            if (context.HttpContext.User.Identity == null)
-            {
-                throw new InvalidOperationException();
-            }
+            //if (context.HttpContext.User.Identity == null)
+            //{
+            //    throw new InvalidOperationException();
+            //}
 
-            if (!context.HttpContext.User.Identity.IsAuthenticated)
-            {
-                context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { 
-                    area = "Identity", page = "/Account/Login", ReturnUrl = context.HttpContext.Request.Path.ToString()
-                }));
-                return;
-            }
+            //if (!context.HttpContext.User.Identity.IsAuthenticated)
+            //{
+            //    context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { 
+            //        area = "Identity", page = "/Account/Login", ReturnUrl = context.HttpContext.Request.Path.ToString()
+            //    }));
+            //    return;
+            //}
 
-            if (!CustomAuthorization.ValidarClaimsUsuario(context.HttpContext, _claim.Type, _claim.Value))
-            {
-                context.Result = new StatusCodeResult(403);
-            }
+            //if (!CustomAuthorization.ValidarClaimsUsuario(context.HttpContext, _claim.Type, _claim.Value))
+            //{
+            //    context.Result = new StatusCodeResult(403);
+            //}
         }
     }
 

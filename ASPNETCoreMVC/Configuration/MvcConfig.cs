@@ -134,6 +134,7 @@ namespace ASPNETCoreMVC.Configuration
                 Console.WriteLine("Direto da Program.cs" + singService.OperacaoId);
             }
 
+            DbMigrationHelpers.EnsureSeedData(app).Wait();
 
             return app;
         }
